@@ -1,0 +1,213 @@
+<assemblies timestamp="05/03/2024 15:46:03">
+  <assembly name="/Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/bin/Debug/net6.0/CalendarTests.dll" run-date="2024-05-03" run-time="15:46:03" total="10" passed="0" failed="10" skipped="0" time="2.039" errors="0">
+    <errors />
+    <collection total="10" passed="0" failed="10" skipped="0" name="Test collection for CalendarTests.CalendarApiTests" time="1.230">
+      <test name="CalendarTests.CalendarApiTests.TestGetCalendar_Ok" type="CalendarTests.CalendarApiTests" method="TestGetCalendar_Ok" time="0.5767097" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGetCalendar_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 115
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestGetCalendarsByEventOrganizer_Ok" type="CalendarTests.CalendarApiTests" method="TestGetCalendarsByEventOrganizer_Ok" time="0.0931819" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGetCalendarsByEventOrganizer_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 159
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestCalendarUpdate_Ok" type="CalendarTests.CalendarApiTests" method="TestCalendarUpdate_Ok" time="0.0912522" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 204, but found NotFound.</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.ObjectAssertions.Be(Object expected, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestCalendarUpdate_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 235
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestGetCalendars_Ok" type="CalendarTests.CalendarApiTests" method="TestGetCalendars_Ok" time="0.0724315" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGetCalendars_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 98
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestGetSortedCalendar" type="CalendarTests.CalendarApiTests" method="TestGetSortedCalendar" time="0.0662979" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGetSortedCalendar() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 219
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestGetCalendarsByName_Ok" type="CalendarTests.CalendarApiTests" method="TestGetCalendarsByName_Ok" time="0.0706299" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGetCalendarsByName_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 181
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestGelCalendarsByLocation_Ok" type="CalendarTests.CalendarApiTests" method="TestGelCalendarsByLocation_Ok" time="0.0649526" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 200, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestGelCalendarsByLocation_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 137
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestCalendarCheckNonExistentApi" type="CalendarTests.CalendarApiTests" method="TestCalendarCheckNonExistentApi" time="0.0608715" result="Fail">
+        <failure>
+          <message>Expected response1.StatusCode to be 405, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestCalendarCheckNonExistentApi() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 207
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestCreateCalendar_Ok" type="CalendarTests.CalendarApiTests" method="TestCreateCalendar_Ok" time="0.0633638" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 201, but found NotFound.
+
+With configuration:
+- Use declared types and members
+- Compare enums by value
+- Match member by name (or throw)
+- Without automatic conversion.
+- Be strict about the order of items in byte arrays
+</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.CollectingAssertionStrategy.ThrowIfAny(IDictionary`2 context)
+   at FluentAssertions.Equivalency.EquivalencyValidator.AssertEquality(EquivalencyValidationContext context)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, Func`2 config, String because, Object[] becauseArgs)
+   at FluentAssertions.Primitives.ObjectAssertions.BeEquivalentTo[TExpectation](TExpectation expectation, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestCreateCalendar_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 72
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="CalendarTests.CalendarApiTests.TestDeleteCalendar_Ok" type="CalendarTests.CalendarApiTests" method="TestDeleteCalendar_Ok" time="0.0698306" result="Fail">
+        <failure>
+          <message>Expected response0.StatusCode to be 204, but found NotFound.</message>
+          <stack-trace>   at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.ObjectAssertions.Be(Object expected, String because, Object[] becauseArgs)
+   at CalendarTests.CalendarApiTests.TestDeleteCalendar_Ok() in /Users/shashank/hackerrank/dotnet/761437-.net-calendar-api/CalendarTests/CalendarApiTests.cs:line 255
+--- End of stack trace from previous location ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+    </collection>
+  </assembly>
+</assemblies>
