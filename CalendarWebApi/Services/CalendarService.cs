@@ -60,7 +60,23 @@ namespace CalendarWebApi.Services
 
         public Task<Calendar> UpdateEvent(int id, UpdateForm calendarEvent)
         {
-            throw new NotImplementedException();
+            var calendarExist =  GetCalendar(id);
+            if (calendarExist.Result == null)
+            {
+                throw new KeyNotFoundException("this event doesn't exists");
+            }
+            
+            var calendar = new Calendar
+            {
+                Name = calendarEvent.Name ?? string.Empty,
+                Location = calendarEvent.Location ?? string.Empty,
+                Time = calendarEvent.Time ?? calendarEvent.Time.Value,
+                EventOrganizer = calendarEvent.EventOrganizer ?? string.Empty,
+                Members = calendarEvent.Members ?? string.Empty,
+
+            };
+
+            return _repository.UpdateEvent(calendar);
         }
     }
 }

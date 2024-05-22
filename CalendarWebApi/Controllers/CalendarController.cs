@@ -60,5 +60,32 @@ namespace CalendarWebApi.Controllers
 
             return Ok();
         }
+        
+        [HttpPut("{id}")]
+        public IActionResult UpdateEvent(int id,[FromBody] Calendar? calendar)
+        {
+            try
+            {
+                var dto = new UpdateForm
+                {
+                    Name = calendar.Name,
+                    Location = calendar.Location,
+                    EventOrganizer = calendar.EventOrganizer,
+                    Members = calendar.Members,
+                    Time = calendar.Time
+                };
+                var response = _calendarService.UpdateEvent(id,dto);
+            }
+            catch (KeyNotFoundException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "An error occurred while deleting the event.");
+            }
+
+            return Ok();
+        }
     }
 }
