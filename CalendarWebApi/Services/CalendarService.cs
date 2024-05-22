@@ -37,15 +37,21 @@ namespace CalendarWebApi.Services
 
             return _repository.DeleteEvent(calendar.Result);
         }
-
-        public Task<List<Calendar>> GetCalendar()
+        
+        public async Task<List<Calendar>> GetCalendar()
         {
-            throw new NotImplementedException();
+            return await _repository.GetCalendar();
         }
 
         public Task<Calendar> GetCalendar(int id)
         {
-            return _repository.GetCalendar(id);
+            var calendars =  _repository.GetCalendar(id);
+            if (calendars.Result == null)
+            {
+                throw new KeyNotFoundException("this event doesn't exists");
+            }
+
+            return calendars;
         }
 
         public Task<List<Calendar>> GetCalendar(Query query)

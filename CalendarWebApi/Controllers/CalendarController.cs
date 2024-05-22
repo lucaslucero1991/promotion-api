@@ -1,4 +1,5 @@
-﻿using CalendarWebApi.DTO;
+﻿using System.Collections;
+using CalendarWebApi.DTO;
 using CalendarWebApi.Models;
 using CalendarWebApi.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,24 @@ namespace CalendarWebApi.Controllers
         {
             _logger = logger;
             _calendarService = calendarService;
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var response = await _calendarService.GetCalendar();
+                return Ok(response);
+            }
+            catch (NullReferenceException e)
+            {
+                return Ok(new List<Calendar>());
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while fetching events.");
+            }
         }
 
         [HttpPost]
