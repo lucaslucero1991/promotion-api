@@ -41,5 +41,24 @@ namespace CalendarWebApi.Controllers
             return CreatedAtAction(nameof(CreateEvent),
                 new { id = response.Id }, response);
         }
+        
+        [HttpDelete("{id}")]
+        public IActionResult DeleteEvent(int id)
+        {
+            try
+            {
+                var response = _calendarService.DeleteEvent(id);
+            }
+            catch (BadHttpRequestException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "An error occurred while deleting the event.");
+            }
+
+            return Ok();
+        }
     }
 }

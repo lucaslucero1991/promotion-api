@@ -29,7 +29,13 @@ namespace CalendarWebApi.Services
 
         public Task<Calendar> DeleteEvent(int id)
         {
-            throw new NotImplementedException();
+            var calendar =  GetCalendar(id);
+            if (calendar.Result == null)
+            {
+                throw new BadHttpRequestException("this event doesn't exists", id);
+            }
+
+            return _repository.DeleteEvent(calendar.Result);
         }
 
         public Task<List<Calendar>> GetCalendar()
@@ -39,7 +45,7 @@ namespace CalendarWebApi.Services
 
         public Task<Calendar> GetCalendar(int id)
         {
-            throw new NotImplementedException();
+            return _repository.GetCalendar(id);
         }
 
         public Task<List<Calendar>> GetCalendar(Query query)
