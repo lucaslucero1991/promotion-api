@@ -16,7 +16,7 @@ namespace CalendarWebApi.Services
 
     public class SubscriptionService : ISubscriptionService
     {
-       private readonly ISubscriptionGateway _subscriptionGateway;
+        private readonly ISubscriptionGateway _subscriptionGateway;
 
         public SubscriptionService(ISubscriptionGateway subscriptionGateway)
         {
@@ -34,5 +34,5 @@ namespace CalendarWebApi.Services
                 Message = gatewayResponse.Message
             };
         }
-    }                               
+    }
 }

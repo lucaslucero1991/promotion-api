@@ -1,6 +1,6 @@
 namespace CalendarWebApi.Controllers.Validators
 {
-   public class ValidatorFactory
+    public class ValidatorFactory : IValidatorFactory
     {
         public IValidator GetValidator(string platform)
         {

@@ -9,6 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CalendarWebApi.Controllers
 {
+    public interface IValidatorFactory
+    {
+        IValidator GetValidator(string platform);
+    }
+
     public interface IValidator
     {
         ValidationResult Validate(SubscriptionRequest request);
@@ -24,12 +29,12 @@ namespace CalendarWebApi.Controllers
     public class SubscriptionController : ControllerBase
     {
         private readonly ISubscriptionService _subscriptionService;
-        private readonly ValidatorFactory _validatorFactory;
+        private readonly IValidatorFactory _validatorFactory;
 
-        public SubscriptionController(ISubscriptionService subscriptionService)
+        public SubscriptionController(ISubscriptionService subscriptionService, IValidatorFactory validatorFactory)
         {
             _subscriptionService = subscriptionService;
-            _validatorFactory = new ValidatorFactory();
+            _validatorFactory = validatorFactory;
         }
 
         [HttpPost]

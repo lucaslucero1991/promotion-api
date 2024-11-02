@@ -20,6 +20,7 @@ namespace CalendarWebApi
             // Registrar servicios y dependencias
             services.AddScoped<ISubscriptionService, SubscriptionService>();
             services.AddScoped<ISubscriptionGateway, SubscriptionGateway>();
+            services.AddScoped<IValidatorFactory, ValidatorFactory>();
             services.AddScoped<ProviderFactory>();
 
             services.AddHttpClient("LaNacionClient", client =>
@@ -27,7 +28,7 @@ namespace CalendarWebApi
                 client.BaseAddress = new Uri("https://qa-clnvalidaciones.lanacion.com.ar");
                 client.DefaultRequestHeaders.Add("x-api-key", "6ygbD92yNj6caRkL2zqiZ5gWpNizswTR7soRxe61");
             });
-            
+
             services.AddScoped<ValidatorFactory>();
             services.AddControllers();
         }

@@ -8,7 +8,7 @@ namespace CalendarWebApi.Gateway
 {
     public class ProviderFactory
     {
-    private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IHttpClientFactory _httpClientFactory;
 
         public ProviderFactory(IHttpClientFactory httpClientFactory)
         {
