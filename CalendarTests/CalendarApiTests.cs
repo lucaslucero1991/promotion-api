@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using CalendarWebApi.DataAccess;
 using CalendarWebApi.DTO;
 using Microsoft.AspNetCore.Hosting;
 using System.Threading.Tasks;

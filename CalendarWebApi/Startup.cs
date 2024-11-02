@@ -1,18 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using CalendarWebApi.DataAccess;
-using Microsoft.EntityFrameworkCore;
 using CalendarWebApi.Services;
+using CalendarWebApi.Controllers.Validators;
+using CalendarWebApi.Controllers;
+using CalendarWebApi.Gateway;
 
 namespace CalendarWebApi
 {
@@ -28,9 +17,18 @@ namespace CalendarWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IRepository, Repository>();
-            services.AddScoped<ICalendarService, CalendarService>();
-            services.AddDbContext<CalendarContext>(options => options.UseInMemoryDatabase("calendardb"));
+            // Registrar servicios y dependencias
+            services.AddScoped<ISubscriptionService, SubscriptionService>();
+            services.AddScoped<ISubscriptionGateway, SubscriptionGateway>();
+            services.AddScoped<ProviderFactory>();
+
+            services.AddHttpClient("LaNacionClient", client =>
+            {
+                client.BaseAddress = new Uri("https://qa-clnvalidaciones.lanacion.com.ar");
+                client.DefaultRequestHeaders.Add("x-api-key", "6ygbD92yNj6caRkL2zqiZ5gWpNizswTR7soRxe61");
+            });
+            
+            services.AddScoped<ValidatorFactory>();
             services.AddControllers();
         }
 
